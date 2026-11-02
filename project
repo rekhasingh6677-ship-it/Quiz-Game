@@ -1,0 +1,104 @@
+#include <stdio.h>
+
+int main(void)
+{
+    int answer;
+    int score = 0;
+
+    printf("====================================\n");
+    printf("       WELCOME TO QUIZ GAME\n");
+    printf("====================================\n");
+
+    printf("\nQ1. Who developed the C language?\n");
+    printf("1. James Gosling\n");
+    printf("2. Dennis Ritchie\n");
+    printf("3. Guido van Rossum\n");
+    printf("4. Bjarne Stroustrup\n");
+    printf("Enter your answer (1-4): ");
+
+    if (scanf("%d", &answer) != 1)
+    {
+        printf("Invalid input!\n");
+        return 1;
+    }
+
+    if (answer == 2)
+    {
+        printf("Correct answer!\n");
+        score++;
+    }
+    else
+    {
+        printf("Wrong answer! Correct answer is Dennis Ritchie.\n");
+    }
+
+    printf("\nQ2. Which symbol ends most C statements?\n");
+    printf("1. .\n");
+    printf("2. :\n");
+    printf("3. ;\n");
+    printf("4. ,\n");
+    printf("Enter your answer (1-4): ");
+
+    if (scanf("%d", &answer) != 1)
+    {
+        printf("Invalid input!\n");
+        return 1;
+    }
+
+    if (answer == 3)
+    {
+        printf("Correct answer!\n");
+        score++;
+    }
+    else
+    {
+        printf("Wrong answer! Correct answer is ;\n");
+    }
+
+    printf("\nQ3. Which function displays output in C?\n");
+    printf("1. scanf()\n");
+    printf("2. printf()\n");
+    printf("3. input()\n");
+    printf("4. read()\n");
+    printf("Enter your answer (1-4): ");
+
+    if (scanf("%d", &answer) != 1)
+    {
+        printf("Invalid input!\n");
+        return 1;
+    }
+
+    if (answer == 2)
+    {
+        printf("Correct answer!\n");
+        score++;
+    }
+    else
+    {
+        printf("Wrong answer! Correct answer is printf().\n");
+    }
+
+    printf("\n====================================\n");
+    printf("           QUIZ RESULT\n");
+    printf("====================================\n");
+
+    printf("Your score: %d out of 3\n", score);
+    printf("Percentage: %.2f%%\n", (score / 3.0) * 100);
+
+    if (score == 3)
+    {
+        printf("Excellent! Perfect score!\n");
+    }
+    else if (score >= 2)
+    {
+        printf("Good job! Keep learning.\n");
+    }
+    else
+    {
+        printf("Keep practicing!\n");
+    }
+
+    printf("Thank you for playing!\n");
+
+    return 0;
+}
